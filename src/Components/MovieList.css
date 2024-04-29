@@ -1,0 +1,64 @@
+body {
+    background-color: #22254b;
+}
+
+.app-container {
+    /*
+    display : 요소를 어떻게 보여줄지 레이아웃을 결정하는 속성 (defualt : inline)
+    1. none : 요소를 렌더링 하지 않도록 설정 (안보일 뿐더러 영역까지 차지하지 않음)
+    2. inline : block과 달리 줄 바꿈이 되지 않고 여백 지정 x (글자나 문장에 효과 주는 목적)
+    3. block : 항상 줄 바꿈되어 새로운 라인에서 시작.
+    4. inline-block : inline요소처럼 동작(줄바꿈 x), 해당 요소 내부는 block처럼 동작(크기, 여백 지정 가능)
+    5. flex : 
+    6. grid : 2차원 방식으로 배치하는 방식 (column과 row의 비율, 크기 지정)
+
+    */
+    display: flex;
+
+    /*
+    flex-wrap : 요소 정렬 시 칸을 초과한다면 새로운 행 혹은 열을 만들어서 요소 정렬
+    1. nowrap : 기본 값, 요소가 컨테이너보다 커도 줄바꿈을 하지 않는다.
+    2. wrap : 요소가 컨테이너보다 크다면, 줄바꿈을 통해서 표시
+    3. wrap-reverse : 요소가 컨테이너보다 크다면, 줄바꿈을 통해서 표시 (reverse)
+
+    */
+    flex-wrap: wrap;
+
+    /*
+    justify-content : 콘텐츠 항목 사이와 주위에 공간을 분배하는 방법 정의 (defulat : start)
+    1. start : 가로배치일때는 왼쪽에서, 세로배치일때는 위에서 정렬
+    2. center : 가운데 정렬
+    3. space-between : 균일한 간격
+    4. space-around : 둘레에 군일한 간격
+    5. space-evenly : 아이템 사이, 양 끝에 일정한 간격
+    */
+    justify-content: center;
+}
+
+.movie-container {
+    width: 190px;
+    margin: 16px;
+    background-color: #373b69;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
+}
+
+.movie-container img {
+    max-width: 100%;
+}
+
+.movie-info {
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.movie-info h4 {
+    margin: 0;
+}
+
+.movie-info span {
+    margin-left: 3px;
+}
